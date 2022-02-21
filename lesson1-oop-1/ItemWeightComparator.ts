@@ -1,8 +1,11 @@
-import { Item } from './Item';
-import { ItemComparator } from './ItemComparator';
+import Item from './Item';
+import ItemComparator from './ItemComparator';
 
-export class ItemWeightComparator implements ItemComparator {
+export default class ItemWeightComparator implements ItemComparator {
     public compare(first: Item, second: Item) {
-        // your code goes here
+        if(first.weight === second.weight) {
+            return 0;
+        }
+        return first.weight > second.weight ? 1 : -1;
     }
 }

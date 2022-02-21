@@ -1,6 +1,6 @@
-import { Item } from './Item';
-import { Comparator } from './Comparator';
+import Comparator from './Comparator';
+import Item from './Item';
 
-export interface ItemComparator extends Comparator<Item> {
+export default interface ItemComparator extends Comparator<Item> {
     compare(first: Item, second: Item): number;
 }

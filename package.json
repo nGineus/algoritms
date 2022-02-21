@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc -t es5 lesson1-oop-1/usage.ts && node lesson1-oop-1/usage.js",
+    "start:lesson1": "tsc lesson1-oop-1/usage.ts --watch"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Oleksandr Kutsenko",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@tsconfig/node12": "^1.0.9"
+  }
 }
