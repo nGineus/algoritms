@@ -1,4 +1,3 @@
-import Item from './Item';
 import Weapon from './Weapon';
 
 export default class Sword extends Weapon {
@@ -7,6 +6,9 @@ export default class Sword extends Weapon {
   }
 
   public polish() {
-    console.log('Polishing Sword');
+    this.damageModifier += Weapon.MODIFIER_CHANGE_RATE;
+    if (this.damageModifier > (this.baseDamage * 1.25)) {
+      this.damageModifier = this.baseDamage * 1.25;
+    }
   }
 }

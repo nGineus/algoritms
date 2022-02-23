@@ -16,4 +16,8 @@ export default class Pizza extends Consumable {
       ? `You eat the ${ this.name }.${ this.spoiled ? 'You feel sick.' : '' }`
       : ``;
   }
+
+  use(): string {
+    return this.eat();
+  }
 }

@@ -13,7 +13,7 @@ export default abstract class Consumable extends Item {
     super(name, value, weight);
   }
 
-  use(): string {
-    return 'USE Consumable';
-  }
+  public abstract use(): string;
+  
+  public abstract eat(): string;
 }
